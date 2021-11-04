@@ -14,5 +14,10 @@ const angela = {
   image: 'angela-caroll-chief-editor.jpg'
 
 }
-
 console.log(angela);
+
+//creo un array dove inserirò i membri del team
+const teamMembers = [
+  angela
+];
+console.log(teamMembers);
