@@ -9,30 +9,52 @@ Ricreiamo le card del nostro team aggiungendo al layout di base fornito, il nost
 //intercetto l'elemento contenitore delle card dall'html
 const teamContainer = document.querySelector('.team-container');
 
-//creo l'oggetto singolo
-const angela = {
-
-  name: 'Angela Caroll',
-  role: 'Chief Editor',
-  image: 'angela-caroll-chief-editor.jpg'
-
-}
-//console.log(angela);
-
-//creo un altro membro del team (come oggetto)
-const walter = {
-
-  name: 'Walter Gordon',
-  role: 'Office Manager',
-  image: 'walter-gordon-office-manager.jpg'
-
-}
-//console.log(walter);
-
 //creo un array dove inserirò i membri del team
-const teamMembers = [angela, walter];
+const teamMembers = 
+[
+
+  {
+    name: '',
+    role: '',
+    image: ''
+  },
+  {
+    name: '',
+    role: '',
+    image: ''
+  },
+
+];
 console.log(teamMembers);
 
+// intercetto le key che mi interessano
+const memberName = xxx.name;
+const memberRole = xxx.role;
+const memberImage = xxx.image;
+
+// indicizzo gli oggetti dell'array
+for(let i = 0; i < teamMembers.length; i++){
+  
+  console.log(teamMembers[i]);
+
+  // per ogni oggetto do un valore diverso alla key in base all'indice
+  switch(teamMembers[i]){
+
+    case 0:
+      memberName = 'Angela Caroll'
+      memberRole = 'Chief Editor'
+      memberImage = 'angela-caroll-chief-editor.jpg'
+      break;
+    case 1:
+      memberName = 'Walter Gordon'
+      memberRole = 'Office Manager'
+      memberImage = 'walter-gordon-office-manager.jpg'
+      break;
+    
+  }
+}
+
+//per ogni oggetto nell'array creo gli elementi necessari
 for(let key of teamMembers){
 
   const teamCard = document.createElement('div');
@@ -40,13 +62,14 @@ for(let key of teamMembers){
   teamCard.innerHTML =
   `
   <div class="card-image">
-    <img src="img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett"/>
+    <img src="img/${memberImage}" alt="${memberName}"/>
   </div>
   <div class="card-text">
-    <h3>Wayne Barnett</h3>
-    <p>Founder & CEO</p>
+    <h3>${memberName}</h3>
+    <p>${memberRole}</p>
   </div>
   `;
 
+  //appendo l'elemento creato al contenitore html
   teamContainer.append(teamCard);
 }
