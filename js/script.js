@@ -14,48 +14,42 @@ const teamMembers =
 [
 
   {
-    name: '',
-    role: '',
-    image: ''
+    name: 'Angela Caroll',
+    role: 'Chief Editor',
+    image: 'angela-caroll-chief-editor.jpg'
   },
   {
-    name: '',
-    role: '',
-    image: ''
+    name: 'Walter Gordon',
+    role: 'Office Manager',
+    image: 'walter-gordon-office-manager.jpg'
+  },
+  {
+    name: 'Angela Lopez',
+    role: 'Social Media Manager',
+    image: 'angela-lopez-social-media-manager.jpg'
+  },
+  {
+    name: 'Scott Estrada',
+    role: 'Developer',
+    image: 'scott-estrada-developer.jpg'
+  },
+  {
+    name: 'Barbara Ramos',
+    role: 'Graphic Designer',
+    image: 'barbara-ramos-graphic-designer.jpg'
   },
 
 ];
 console.log(teamMembers);
 
-// intercetto le key che mi interessano
-const memberName = xxx.name;
-const memberRole = xxx.role;
-const memberImage = xxx.image;
-
-// indicizzo gli oggetti dell'array
-for(let i = 0; i < teamMembers.length; i++){
-  
-  console.log(teamMembers[i]);
-
-  // per ogni oggetto do un valore diverso alla key in base all'indice
-  switch(teamMembers[i]){
-
-    case 0:
-      memberName = 'Angela Caroll'
-      memberRole = 'Chief Editor'
-      memberImage = 'angela-caroll-chief-editor.jpg'
-      break;
-    case 1:
-      memberName = 'Walter Gordon'
-      memberRole = 'Office Manager'
-      memberImage = 'walter-gordon-office-manager.jpg'
-      break;
-    
-  }
-}
-
 //per ogni oggetto nell'array creo gli elementi necessari
-for(let key of teamMembers){
+for(let item of teamMembers){
+
+
+  // intercetto le key che mi interessano
+  const memberName = item.name;
+  const memberRole = item.role;
+  const memberImage = item.image;
 
   const teamCard = document.createElement('div');
   teamCard.className = 'team-card';
