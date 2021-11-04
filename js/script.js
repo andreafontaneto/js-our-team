@@ -6,6 +6,9 @@ Ricreiamo le card del nostro team aggiungendo al layout di base fornito, il nost
 - Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team. (se non fate tempo a realizzare questa parte va bene ugualmente e pensateci in ogni caso solo una volta stampata correttamente tutta la pagina)
 */
 
+//intercetto l'elemento contenitore delle card dall'html
+const teamContainer = document.querySelector('.team-container');
+
 //creo l'oggetto singolo
 const angela = {
 
@@ -14,10 +17,18 @@ const angela = {
   image: 'angela-caroll-chief-editor.jpg'
 
 }
-console.log(angela);
+//console.log(angela);
+
+//creo un altro membro del team (come oggetto)
+const walter = {
+
+  name: 'Walter Gordon',
+  role: 'Office Manager',
+  image: 'walter-gordon-office-manager.jpg'
+
+}
+//console.log(walter);
 
 //creo un array dove inserirò i membri del team
-const teamMembers = [
-  angela
-];
+const teamMembers = [angela, walter];
 console.log(teamMembers);
