@@ -32,3 +32,21 @@ const walter = {
 //creo un array dove inserirò i membri del team
 const teamMembers = [angela, walter];
 console.log(teamMembers);
+
+for(let key of teamMembers){
+
+  const teamCard = document.createElement('div');
+  teamCard.className = 'team-card';
+  teamCard.innerHTML =
+  `
+  <div class="card-image">
+    <img src="img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett"/>
+  </div>
+  <div class="card-text">
+    <h3>Wayne Barnett</h3>
+    <p>Founder & CEO</p>
+  </div>
+  `;
+
+  teamContainer.append(teamCard);
+}
